@@ -1,0 +1,13 @@
+---
+modules:
+  default:
+    # headers:
+    #   X-Dummy: my-test-header
+    metrics:
+    - name: my_first_metric
+      valuetype: gauge
+      path: '{ .my_first_metric }' # Uses JSONPath
+      help: This is my first metric transformed from JSON by the json_exporter
+      # labels:
+      #   environment: beta # static label
+        # location: 'planet-{.location}'          # dynamic label
